@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
     config.vm.box = "centos/7"
-    config.vm.hostname = "centos73.local"
+    config.vm.hostname = "centos.local"
     config.vm.provision :shell, path: "bootstrap.sh"
     config.vm.network "private_network", ip: "192.168.100.73"
     # config.vm.network :forwarded_port, guest: 80, host: 4567
