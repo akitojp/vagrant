@@ -12,7 +12,7 @@ ls ~/.vagrant.d/boxes/
 ```
 
 # Plugin
-##Sahara
+## Sahara
 ```
 # sandbox mode on
 $ vagrant sandbox on
