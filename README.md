@@ -1,46 +1,49 @@
 # vagrant
-### vagrant up
+## vagrant up
 ```
 vagrant init mybox
 ```
 
-### box
+## box
 ```
 vagrant package
 vagrant box add <name> package.box
 ls ~/.vagrant.d/boxes/
 ```
 
+## Snapshots
+```
+# List snapshots
+vagrant snapshot list
+
+# Create a snapshot
+vagrant snapshot push
+
+# Restore snapshot
+vagrant snapshot pop
+
+# Create snapshot (specify snapshot name)
+vagrant snapshot save [name]
+
+# Restore snapshot (specify snapshot name)
+vagrant snapshot restore [name]
+
+# Delete snapshot (specify snapshot name)
+vagrant snapshot delete [name]
+
+# Storage directory of the snapshot
+~/VirtualBox VMs/<vm_name>/Snapshots/
+```
+
 # Plugin
-## Sahara
 ```
-# sandbox mode on
-$ vagrant sandbox on
+# Installing a plugin from a known gem source
+$ vagrant plugin install my-plugin
 
-# Rollback
-$ vagrant sandbox rollback
+# Installing a plugin from a local file source
+$ vagrant plugin install /path/to/my-plugin.gem
 
-# commit
-$ vagrant sandbox commit
+# Uninstall
+$ vagrant plugin uninstall my-plugin
 
-# sandbox mode off
-$ vagrant sandbox off
-
-# sandbox status
-$ vagrant sandbox status
-```
-
-```
-vagrant plugin install <plugin name>
-vagrant plugin install sahara
-vagrant plugin list
-```
-
-#### sahara
-```
-vagrant sandbox on
-vagrant sandbox status
-vagrant sandbox rollback
-vagrant sandbox commit
-vagrant sandbox off
 ```
