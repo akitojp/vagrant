@@ -11,7 +11,25 @@ vagrant box add <name> package.box
 ls ~/.vagrant.d/boxes/
 ```
 
-### Plugin
+# Plugin
+##Sahara
+```
+# sandbox mode on
+$ vagrant sandbox on
+
+# Rollback
+$ vagrant sandbox rollback
+
+# commit
+$ vagrant sandbox commit
+
+# sandbox mode off
+$ vagrant sandbox off
+
+# sandbox status
+$ vagrant sandbox status
+```
+
 ```
 vagrant plugin install <plugin name>
 vagrant plugin install sahara
